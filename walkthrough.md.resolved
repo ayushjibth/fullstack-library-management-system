@@ -1,0 +1,36 @@
+# Library Management System - Walkthrough
+
+## What Was Built
+I have successfully implemented a full-stack locally running Library Management System.
+- **Backend**: Built with Java 17 and Spring Boot (Spring MVC, Spring Data JPA).
+- **Database**: H2 in-memory database configuration ensures a zero-friction start without needing external MySQL/PostgreSQL servers.
+- **Frontend**: A custom React application embedded directly into the Spring Boot backend ([src/main/resources/static/app.js](file:///c:/Users/ayush/OneDrive%20-%20Noida%20International%20University/Desktop/library%20project/backend/src/main/resources/static/app.js)). This allowed you to quickly test it without needing to install Node.js!
+- **Design Aesthetic**: Premium glassmorphism design using seamless CSS. 
+
+## Workflow Features
+- **Dashboard Overview**: See top-level metrics quickly.
+- **Book Management**: Full CRUD capabilities for library books.
+- **Member Management**: Track active members.
+- **Borrowing Engine**: Check out available books and log them against active members.
+
+## Validation & Proof of Work
+The backend was successfully built via Maven and started on port `8080`.
+The browser automation agent performed a complete End-to-End flow:
+1. Created "The Great Gatsby" book.
+2. Created "John Doe" member.
+3. Successfully checked the book out to the member.
+
+### Screenshots & Recordings
+Here is the recorded video of the interface passing the E2E verification:
+![Browser E2E Verification Flow](file:///C:/Users/ayush/.gemini/antigravity/brain/46781c92-6923-46c0-9bcc-24f3611673de/e2e_library_testing_1774817540502.webp)
+
+Here is a shot of the borrowing module working perfectly:
+![Borrowing System View](file:///C:/Users/ayush/.gemini/antigravity/brain/46781c92-6923-46c0-9bcc-24f3611673de/.system_generated/click_feedback/click_feedback_1774817663550.png)
+
+## How to Run it Yourself
+If you stopped the server, you can restart it anytime by running:
+```bash
+cd "backend"
+mvnw.cmd spring-boot:run
+```
+Then navigate to `http://localhost:8080` in your web browser.
